@@ -81,3 +81,28 @@ body {
   font-size: 28px;
   margin-top: -6px;
 }
+
+@media (max-width: 480px) {
+  .card {
+    padding: 30px 20px;
+  }
+  .search input {
+    width: 50%;
+    font-size: 16px;
+    padding: 8px 20px;
+    height: 50px;
+  }
+  .weather h1 {
+    font-size: 60px;
+  }
+  .weather h2 {
+    font-size: 35px;
+  }
+  .details {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .col {
+    justify-content: center;
+  }
+}
