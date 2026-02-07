@@ -31,7 +31,7 @@ searchBtn.addEventListener("click", () => {
 });
 
 //Getting GeoLocation and converting it to city name using reverse geocoding API and then calling the checkWeather function with the city name
-const currApiUrl = "http://api.openweathermap.org/geo/1.0/reverse?";
+const currApiUrl = "https://api.openweathermap.org/geo/1.0/reverse?";
 navigator.geolocation.getCurrentPosition(
   (position) => {
     const lat = position.coords.latitude;
@@ -42,7 +42,7 @@ navigator.geolocation.getCurrentPosition(
         currApiUrl + `lat=${lat}&lon=${lon}&appid=${apiKey}`,
       );
       var data1 = await response.json();
-      //console.log(data1);
+      console.log(data1);
       const city = data1[0].name;
       console.log(city);
       checkWeather(city);
