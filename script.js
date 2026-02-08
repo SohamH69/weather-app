@@ -48,7 +48,7 @@ searchBtn.addEventListener("click", () => {
 
 //Update UI
 function updateUI(data, iconUrl) {
-  document.querySelector(".weather-desc").innerHTML = data.weather[0].main;
+  document.querySelector(".weather-desc").innerHTML = data.description;
   document.querySelector(".city").innerHTML = data.name;
   document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
   document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
