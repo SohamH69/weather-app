@@ -49,10 +49,10 @@ searchBtn.addEventListener("click", () => {
 //Update UI
 function updateUI(data, iconUrl) {
   document.querySelector(".weather-desc").innerHTML = data.description;
-  document.querySelector(".city").innerHTML = data.name;
-  document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
-  document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-  document.querySelector(".wind").innerHTML = data.wind.speed + "km/hr";
+  document.querySelector(".city").innerHTML = data.city;
+  document.querySelector(".temp").innerHTML = Math.round(data.temp) + "°C";
+  document.querySelector(".humidity").innerHTML = data.humidity + "%";
+  document.querySelector(".wind").innerHTML = data.wind + "km/hr";
   document.getElementById("weather-icon").src = iconUrl;
 }
 
