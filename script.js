@@ -13,7 +13,7 @@ async function getWeatherByLocation() {
       `https://weather-app-backend-dm79.onrender.com/weather?lat=${lat}&lon=${lon}`,
     );
     const data = await response.json();
-    const iconCode = data.weather[0].icon;
+    const iconCode = data.icon;
     const iconUrl = `https://openweathermap.org/payload/api/media/file/${iconCode}.png`;
 
     //Update UI
@@ -33,7 +33,7 @@ async function getWeatherByCity(city) {
       `https://weather-app-backend-dm79.onrender.com/weather?city=${city}`,
     );
     const data = await response.json();
-    const iconCode = data.weather[0].icon;
+    const iconCode = data.icon;
     const iconUrl = `https://openweathermap.org/payload/api/media/file/${iconCode}.png`;
 
     updateUI(data, iconUrl);
