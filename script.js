@@ -57,7 +57,7 @@ function updateUI(data, iconUrl) {
   document.querySelector(".temp").innerHTML = Math.round(data.temp) + "°C";
   document.querySelector(".humidity").innerHTML = data.humidity + "%";
   document.querySelector(".wind").innerHTML = data.wind + "km/hr";
-  document.getElementById("weather-icon").src = iconUrl;
+  document.getElementById("weatherIcon").src = iconUrl;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
