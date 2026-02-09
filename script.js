@@ -14,7 +14,9 @@ async function getWeatherByLocation() {
       console.log("Fetching weather data for current location..."),
     );
     const data = await response.json();
+    console.log("Weather data received:", data);
     const iconCode = data.icon;
+    console.log("Weather icon code:", iconCode);
     const iconUrl = `https://openweathermap.org/payload/api/media/file/${iconCode}.png`;
 
     //Update UI
