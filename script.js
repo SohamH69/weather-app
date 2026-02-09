@@ -11,6 +11,7 @@ async function getWeatherByLocation() {
     //Call backend
     const response = await fetch(
       `https://weather-app-backend-dm79.onrender.com/weather?lat=${lat}&lon=${lon}`,
+      console.log("Fetching weather data for current location..."),
     );
     const data = await response.json();
     const iconCode = data.icon;
@@ -31,6 +32,7 @@ async function getWeatherByCity(city) {
   try {
     const response = await fetch(
       `https://weather-app-backend-dm79.onrender.com/weather?city=${city}`,
+      console.log(`Fetching weather data for city: ${city}...`),
     );
     const data = await response.json();
     const iconCode = data.icon;
